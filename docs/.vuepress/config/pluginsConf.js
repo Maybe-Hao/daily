@@ -18,7 +18,7 @@ module.exports = {
     platform: 'github-v4',
 
     // 其他的 Vssue 配置
-    owner: 'xiaojubusongxi26',
+    owner: 'Maybe-Hao',
     repo: 'daily',
     clientId: secret.clientId,
     clientSecret: secret.clientSecret,
