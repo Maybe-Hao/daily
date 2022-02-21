@@ -13,6 +13,17 @@ module.exports = {
       buttonText: "我看看"
     }
   },
+  '@vssue/vuepress-plugin-vssue': {
+    // 设置 `platform` 而不是 `api`
+    platform: 'github-v4',
+
+    // 其他的 Vssue 配置
+    owner: 'xiaojubusongxi26',
+    repo: 'mydaily',
+    clientId: secret.clientId,
+    clientSecret: secret.clientSecret,
+    autoCreateIssue: true
+  },
   '@vuepress/back-to-top': true,
   "vuepress-plugin-auto-sidebar": {
     nav: true,
