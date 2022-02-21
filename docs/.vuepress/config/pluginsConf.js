@@ -19,7 +19,7 @@ module.exports = {
 
     // 其他的 Vssue 配置
     owner: 'xiaojubusongxi26',
-    repo: 'mydaily',
+    repo: 'daily',
     clientId: secret.clientId,
     clientSecret: secret.clientSecret,
     autoCreateIssue: true
