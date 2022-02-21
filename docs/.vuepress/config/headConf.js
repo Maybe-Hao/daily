@@ -1,7 +1,7 @@
 module.exports = [
   ['link', { rel: 'icon', href: '/favicon.ico' }],
-  ['meta', { name: 'keywords', content: '小橘不颂兮的个人博客，前端，计算机，数学，英语，数据结构，操作系统' }],
-  ['meta', { name: 'author', content: '小橘不颂兮' }],
+  ['meta', { name: 'keywords', content: '李浩的个人博客，前端，计算机，数学，英语，数据结构，操作系统' }],
+  ['meta', { name: 'author', content: '李浩' }],
   ['link', { rel: 'manifest', href: '/manifest.json' }],
   ['meta', { name: 'theme-color', content: '#3eaf7c' }],
   ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],

@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs --temp .temp",
     "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh",
     "docs:nav": "vuepress nav docs"
   },
   "repository": {
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/Maybe-Hao/daily#readme",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.7",
     "vuepress": "^1.9.7",
     "vuepress-plugin-auto-sidebar": "^2.3.2"
   },
