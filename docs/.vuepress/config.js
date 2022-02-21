@@ -7,6 +7,7 @@ const moment = require('moment')
 moment.locale("zh-cn")
 
 module.exports = {
+  base: "/daily/",
   title: "小李浩",
   description: "小李浩的个人笔记,持续更新中",
   head: headConf,
