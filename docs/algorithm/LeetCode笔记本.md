@@ -4,19 +4,19 @@
 
 ### 1.题号：217 判断重复元素
 
-![image-20210910095710306](../images/image-20210910095710306.png)
+![image-20210910095710306](../public/assets/img/image-20210910095710306.png)
 
 思路：通过双循环，立flag来看是否有重叠，使用C语言，方法老套，效率低下。并且中途几次指针超出范围(掌握不牢固)
 
 评论区大神解法：
 
-![image-20210910095954923](../images/image-20210910095954923.png)
+![image-20210910095954923](../public/assets/img/image-20210910095954923.png)
 
 写的已经很详细，拓展了我对HashSet的方法的了解，好耶！学到了
 
 ### 2.有效的数独
 
-![image-20210914203952799](../images/image-20210914203952799.png)
+![image-20210914203952799](../public/assets/img/image-20210914203952799.png)
 
 学到的：HashSet<Integer> set=new HashSet<Integer>();的用法
 
@@ -58,7 +58,7 @@ class Solution {
 
 ### 3.移除链表元素（方法新颖）
 
-![image-20210916110311011](../images/image-20210916110311011.png)
+![image-20210916110311011](../public/assets/img/image-20210916110311011.png)
 
 ```java
 class Solution {
