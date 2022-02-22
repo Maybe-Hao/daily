@@ -35,7 +35,7 @@ module.exports = {
         "/computerBasics/operatingSystem/": "操作系统",
         "/computerBasics/dataStructure/": "数据结构",
         "/computerBasics/computerNetwork/": "计算机网络",
-        "/computerBasics/compositionPrinciple/": "计算机组成原理",
+        "/rearend/": "后端",
         "/other/": "其他"
       }
     }

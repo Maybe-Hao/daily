@@ -1,5 +1,5 @@
 const headConf = require("./config/headConf");
-const nav = require("./config/navConf");
+const nav = require("./nav");
 const sidebar = require("./config/sidebarConf");
 const pluginsConf = require("./config/pluginsConf");
 

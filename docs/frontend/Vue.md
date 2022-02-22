@@ -131,7 +131,8 @@ Vue是视图层框架，作者尤雨溪严格遵守SoC（关注度分离原则�
 
 <img :src="$withBase('/assets/img/image-20210909103754889.png')">
 
-重点：当我们在网页中调用vm.currentTime1()时，我们可以发现返回的结果是在变化的![image-20210909104033823](../.vuepress/public/assets/img/image-20210909104033823.png)
+重点：当我们在网页中调用vm.currentTime1()时，我们可以发现返回的结果是在变化的
+<img :src="$withBase('/assets/img/image-20210909104033823.png')">
 
 但我们调用vm.currentTime2()时，报错，显示不是方法，并且调用vm.currentTime2，返回的结果始终是一个值，说明vm.currentTime2是个属性不是方法
 

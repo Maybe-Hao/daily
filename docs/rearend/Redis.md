@@ -23,23 +23,18 @@
 > 2.Memcahed（缓存）+Mysql+垂直拆分
 
 读写分离
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20211209132814764](../.vuepress/public/assets/img/image-20211209132814764.png)
+<img :src="$withBase('/assets/img/image-20211209132814764.png')">
 
 mysql2写内容，同步到1和3
 
 1、3负责读数据库
 
 为了避免不同用户查询同样得数据，多次访问同样得sql很浪费资源，为了减轻数据库压力，可以再查询中设一个缓存保证效率
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20211209133235343](../.vuepress/public/assets/img/image-20211209133235343.png)
+<img :src="$withBase('/assets/img/image-20211209132814764.png')">
 
 > 3.分库分表+水平拆分+Mysql集群
 
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-<img src="../.vuepress/public/assets/img/image-20211209133955731.png" alt="image-20211209133955731"  />
+<img src="$withBase('/assets/img/image-20211209133955731.png')" />
 
 早年MyISAM：表锁，在查一个东西的时候会把整个表锁定，直到出结果，这样十分影响效率，在高并发下会出现严重得锁问题。
 
@@ -56,8 +51,7 @@ Mysql等关系数据库不够用！数据量很多，变化很大
 Mysql有的使用它来存储大的文件，博客，图片等，这样导致效率低，若单独处理这些大数据，就可以减轻压力
 
 
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20211209140206051](../.vuepress/public/assets/img/image-20211209140206051.png)
+<img :src="$withBase('/assets/img/image-20211209132814764.png')">
 
 > 5.为什么要用Nosql
 
@@ -78,11 +72,8 @@ NOSQL=not only SQL
 2.大数据量高性能（Redis 一秒写8w次，读取11w次，NoSQL的缓存，性能比较高）
 
 3.数据类型多样性（不需要事先设计数据库，随取随用）
-
-(../.vuepress/public/assets/img/image-20211209141913786.png)
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20211209142032971](../.vuepress/public/assets/img/image-20211209142032971.png)
+<img :src="$withBase('/assets/img/image-20211209141913786.png')">
+<img :src="$withBase('/assets/img/image-20211209142032971.png')">
 
 > 了解 3v+3高
 
@@ -128,9 +119,7 @@ KV键值对：
 - Neo4j，infoGrid
 
 ### **四大分类区别**
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220107101953465](../.vuepress/public/assets/img/image-20220107101953465.png)
+<img :src="$withBase('/assets/img/image-20220107101953465.png')">
 
 ## Redis入门
 
@@ -194,25 +183,19 @@ redis-6.2.6
    ```
    make
    ```
-
-    <img :src="$withBase('/assets/img/image-20210909103754889.png')">
-   ![image-20220107142140385](../.vuepress/public/assets/img/image-20220107142140385.png)
+    <img :src="$withBase('/assets/img/image-20220107142140385.png')">
 
 6.
 
 ```
 make install
 ```
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220107142659505](../.vuepress/public/assets/img/image-20220107142659505.png)
+<img :src="$withBase('/assets/img/image-20220107142659505.png')">
 
 7.确认redis安装是否完成
 
 redis默认安装路径为 /usr/local/bin
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220107142820799](../.vuepress/public/assets/img/image-20220107142820799.png)
+<img :src="$withBase('/assets/img/image-20220107142820799.png')">
 
 8.将redis配置文件，复制到当前目录文件
 
@@ -224,18 +207,14 @@ mkdir /Rconfig
 
 cp /opt/redis-6.2.6/redis.conf redis-config
 ```
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220107144109542](../.vuepress/public/assets/img/image-20220107144109542.png)
+<img :src="$withBase('/assets/img/image-20220107144109542.png')">
 
 9.redis默认不是后台启动，需要修改配置
 
 ```
 vim redis.conf
 ```
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220107144347667](../.vuepress/public/assets/img/image-20220107144347667.png)
+<img :src="$withBase('/assets/img/image-20220107144347667.png')">
 
 10.启动redis服务
 
@@ -250,9 +229,7 @@ kill -9 pid 杀死进程
 pid是第二列数字
 
 ```
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220107152351025](../.vuepress/public/assets/img/image-20220107152351025.png)
+<img :src="$withBase('/assets/img/image-20220107152351025.png')">
 
 ```
 上方 使用redis客户端连接
@@ -269,9 +246,7 @@ keys * 查看所有键值
 shutdown
 exit
 ```
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220107152806271](../.vuepress/public/assets/img/image-20220107152806271.png)
+<img :src="$withBase('/assets/img/image-20220107152806271.png')">
 
 12.再次查看进程是否存在
 
@@ -279,18 +254,14 @@ exit
 ps -ef|grep redis 
 //查找redis进程
 ```
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220107152840961](../.vuepress/public/assets/img/image-20220107152840961.png)
+<img :src="$withBase('/assets/img/image-20220107152840961.png')">
 
 进程都已关闭！
 
 ### 测试功能
 
 redis-benchmark是官方自带的压力测试
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220108162753113](../.vuepress/public/assets/img/image-20220108162753113.png)
+<img :src="$withBase('/assets/img/image-20220108162753113.png')">
 
 ```
 #测试：100个并发连接 100000请求
@@ -300,18 +271,14 @@ redis-benchmark -h localhost -p -c 100 -n 100000
 ### 基础知识
 
 redis默认有16个数据库
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220108164255286](../.vuepress/public/assets/img/image-20220108164255286.png)
+<img :src="$withBase('/assets/img/image-20220108164255286.png')">
 
 使用的是第0个数据库
 
 可以使用**select**进行切换数据库
 
 使用**dbsize**查询数据库大小
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220108164358105](../.vuepress/public/assets/img/image-20220108164358105.png)
+<img :src="$withBase('/assets/img/image-20220108164358105.png')">
 
 清除当前数据库 **flushdb**
 
@@ -1021,21 +988,15 @@ OK
 bitmaps位图，数据结构，操作二进制来进行记录，就只有0和1两个状态
 
 用bitmap记录周一到周日的打卡记录
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220123133111832](../.vuepress/public/assets/img/image-20220123133111832.png)
+<img :src="$withBase('/assets/img/image-20220123133111832.png')">
 
 查看某天是否打卡
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220123133214635](../.vuepress/public/assets/img/image-20220123133214635.png)
+<img :src="$withBase('/assets/img/image-20220123133214635.png')">
 
 
 
 统计打卡天数
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220123133243752](../.vuepress/public/assets/img/image-20220123133243752.png)
+<img :src="$withBase('/assets/img/image-20220123133243752.png')">
 
 
 
@@ -1210,9 +1171,7 @@ QUEUED
 (nil)
 
 ```
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220125215851123](../.vuepress/public/assets/img/image-20220125215851123.png)
+<img :src="$withBase('/assets/img/image-20220125215851123.png')">
 
 如果修改失败，获取最新得值就行了。（unwatch再watch）
 
@@ -1402,63 +1361,49 @@ class RedisSpringbootApplicationTests {
 启动时，通过配置文件来来启动的！
 
 > 1.单位
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220208190446250](../.vuepress/public/assets/img/image-20220208190446250.png)
+<img :src="$withBase('/assets/img/image-20220208190446250.png')">
 
 1、配置文件 unit单位 对大小写不敏感
 
 > 包含
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220208190715250](../.vuepress/public/assets/img/image-20220208190715250.png)
+<img :src="$withBase('/assets/img/image-20220208190715250.png')">
 
 就好比Springboot中的 import
 
 > 网络
 
 1.IP
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220208190907420](../.vuepress/public/assets/img/image-20220208190907420.png)
+<img :src="$withBase('/assets/img/image-20220208190907420.png')">
 
 2.端口和保护模式
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220208191006207](../.vuepress/public/assets/img/image-20220208191006207.png)
+<img :src="$withBase('/assets/img/image-20220208191006207.png')">
 
 > 通用
 
 ```bash
 protected-mode 默认是no，我们需要自己开启为yes不然一退出就关闭进程
 ```
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220208191230772](../.vuepress/public/assets/img/image-20220208191230772.png)
+<img :src="$withBase('/assets/img/image-20220208191230772.png')">
 
 
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220208191308195](../.vuepress/public/assets/img/image-20220208191308195.png)
+<img :src="$withBase('/assets/img/image-20220208191308195.png')">
 
 如果以后台的方式运行，我们就需要指定一个pid文件
 
 
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220208191531726](../.vuepress/public/assets/img/image-20220208191531726.png)
+<img :src="$withBase('/assets/img/image-20220208191531726.png')">
 
 设置日志文件完整路径 log-redis.log(日志文件)由自己创建自己定义
 
 日志分类：debug：基本所有信息 notice：生产环境信息 warning：严重、重要的信息
 
 
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210090620794](../.vuepress/public/assets/img/image-20220210090620794.png)
+<img :src="$withBase('/assets/img/image-20220210090620794.png')">
 
 默认数据库数量为16
 
 
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210090658335](../.vuepress/public/assets/img/image-20220210090658335.png)
+<img :src="$withBase('/assets/img/image-20220210090658335.png')">
 
 是否总是显示LOGO
 
@@ -1467,9 +1412,7 @@ protected-mode 默认是no，我们需要自己开启为yes不然一退出就关
 持久化，在规定时间内，执行了多少次操作，则会持久化到文件 .rgb .aof
 
 redis是内存数据库，如果没有持久化，那么数据断电即失
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210091208860](../.vuepress/public/assets/img/image-20220210091208860.png)
+<img :src="$withBase('/assets/img/image-20220210091208860.png')">
 
 ```bash
 #若在900s内，如果至少有一个key进行了修改我们进行持久化操作
@@ -1503,9 +1446,7 @@ config set requirepass "123456" 设置redis密码
 ```
 
 实例
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210100355001](../.vuepress/public/assets/img/image-20220210100355001.png)
+<img :src="$withBase('/assets/img/image-20220210100355001.png')">
 
 > 限制CLient
 
@@ -1541,9 +1482,7 @@ appendfsync everysec #每秒执行一次sync（执行同步），但可能丢失
 ### RDB（Redis Data）
 
 > 什么是RDB
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210151928665](../.vuepress/public/assets/img/image-20220210151928665.png)
+<img :src="$withBase('/assets/img/image-20220210151928665.png')">
 
 在指定的时间间隔内将内存中的数据集快照写入磁盘，也就是行话讲的5napshot快照，它恢复时是将快照文件直接读到内存里。
 
@@ -1590,18 +1529,14 @@ config get dir #在得出的目录下存在dump.rdb，启动时就会自动回�
 以日志的形式记录每一个操作，将Redis执行过的所有命令记录下来（读取操作不记录），只许追加文件但不可以改写文件，redis启动之初会读取该文件重新构建数据，换言之，redis重启的话就根据日志文件的内容将写指令从前到后执行一次以完成数据的恢复工作
 
 > Append
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210152627577](../.vuepress/public/assets/img/image-20220210152627577.png)
+<img :src="$withBase('/assets/img/image-20220210152627577.png')">
 
 （/append 就是在本文件中搜索append）
 
 默认是不开起的，需要改为yes后启用，重启redis就可以生效
 
 > .aof文件出错怎么办
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210153152741](../.vuepress/public/assets/img/image-20220210153152741.png)
+<img :src="$withBase('/assets/img/20220210153152741.png')">
 
 使用redis-check-aof来修复aof文件
 
@@ -1666,19 +1601,13 @@ auto-aof-rewrite-percentage：执行AOF重写时，当前AOF大小(即aof_curren
 Redis 发布订阅(pub/sub)是一种消息通信模式︰发送者(pub)发送消息，订阅者(sub)接收消息。微信、微博、关注系统!Redis客户端可以订阅任意数量的频道。
 
 订阅/发布消息图︰
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210164644355](../.vuepress/public/assets/img/image-20220210164644355.png)
+<img :src="$withBase('/assets/img/image-20220210164644355.png')">
 
 第一个:消息发送者，第二个:频道第三个:消息订阅者!
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210165448554](../.vuepress/public/assets/img/image-20220210165448554.png)
+<img :src="$withBase('/assets/img/image-20220210165448554.png')">
 
 > 命令
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210165521072](../.vuepress/public/assets/img/image-20220210165521072.png)
+<img :src="$withBase('/assets/img/image-20220210165521072.png')">
 
 
 
@@ -1726,9 +1655,7 @@ Redis是使用C实现的，通过分析Redis源码里的pubsub.c文件，了解�
 Pub/Sub从字面上理解就是发布( Publish )与订阅(Subscribe )，在Redis中，你可以设定对某一个key值进行消息发布及消息订阅，当一个key值上进行了消息发布后，所有订阅它的客户端都会收到相应的消息。这一功能最明显的用法就是用作实时消息系统，比如普通的即时聊天，群聊等功能。
 
 e、g 狂神
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220210170306411](../.vuepress/public/assets/img/image-20220210170306411.png)
+<img :src="$withBase('/assets/img/image-20220210170306411.png')">
 
 通过PUBLISH命令向订阅者发送消息，redis-server会使用给定的频道作为键，在它所维护的channel 字典中查找记录了订阅这个频道的所有客户端的链表，遍历这个链表，将消息发布给所有订阅者。
 
@@ -1769,9 +1696,7 @@ Pub/Sub从字面上理解就是发布( Publish )与订阅( Subscribe )，在Redi
 2、从容量上，单个Redis服务器内存容量有限，就算一台Redis服务器内存容量为256G，也不能将所有内存用作Redis存储内存，一般来说，**单台Redis最大使用内存不应该超过20G**。
 
 电商网站上的商品，一般都是一次上传，无数次浏览的，说专业点也就是"多读少写""。对于这种场景，我们可以使如下这种架构:
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211102713622](../.vuepress/public/assets/img/image-20220211102713622.png)
+<img :src="$withBase('/assets/img/image-20220211102713622.png')">
 
 ### 环境配置
 
@@ -1796,9 +1721,7 @@ repl_backlog_histlen:0
 ### 配置文件修改
 
 1、先多个连接
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211103813232](../.vuepress/public/assets/img/image-20220211103813232.png)
+<img :src="$withBase('/assets/img/image-20220211103813232.png')">
 
 2、复制配置文件
 
@@ -1813,29 +1736,19 @@ cp redis.conf redis81.conf
 3、修改每一个配置文件
 
 修改端口号，各个配置文件都要改成对应的端口号
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211104018194](../.vuepress/public/assets/img/image-20220211104018194.png)
+<img :src="$withBase('/assets/img/image-20220211104018194.png')">
 
 修改pid，也该成对应的
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211104106137](../.vuepress/public/assets/img/image-20220211104106137.png)
+<img :src="$withBase('/assets/img/image-20220211104106137.png')">
 
 修改log文件，也不能重名！
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211104158742](../.vuepress/public/assets/img/image-20220211104158742.png)
+<img :src="$withBase('/assets/img/image-20220211104158742.png')">
 
 修改RDB文件名，避免重名
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211104236243](../.vuepress/public/assets/img/image-20220211104236243.png)
+<img :src="$withBase('/assets/img/image-20220211104236243.png')">
 
 ### 启动服务
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211105300966](../.vuepress/public/assets/img/image-20220211105300966.png)
+<img :src="$withBase('/assets/img/image-20220211105300966.png')">
 
 ps：若启动服务时没有权限访问日志文件导致失败的可以参考**“遇到的问题中的第二个问题”**
 
@@ -1889,9 +1802,7 @@ repl_backlog_histlen:28
 ```
 
 配置完成后主机状态应为：
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211110547105](../.vuepress/public/assets/img/image-20220211110547105.png)
+<img :src="$withBase('/assets/img/image-20220211110547105.png')">
 
 **在服务端中命令主从是暂时的，在配置文件中配置是永久的！**
 
@@ -1904,14 +1815,10 @@ repl_backlog_histlen:28
 主机写入得，从机都能查到。
 
 master：
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211110927388](../.vuepress/public/assets/img/image-20220211110927388.png)
+<img :src="$withBase('/assets/img/image-20220211110927388.png')">
 
 slave1：
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211110946150](../.vuepress/public/assets/img/image-20220211110946150.png)
+<img :src="$withBase('/assets/img/image-20220211110946150.png')">
 
 没有配置哨兵时，主机关机了，从机仍然时从机
 
@@ -1944,9 +1851,7 @@ Master接到命令，启动后台的存盘进程，同时收集所有接收到�
 即slave2成为slave1的从机，slave1是slave2的主机
 
 **slave2仍然无法写（他即使主机又是从机）**
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220211165754621](../.vuepress/public/assets/img/image-20220211165754621.png)
+<img :src="$withBase('/assets/img/image-20220211165754621.png')">
 
 这也能实现主从复制，称之为链路法
 
@@ -1976,7 +1881,7 @@ SLAVEOF no one
 
 哨兵模式是一种特殊的模式，首先Redis提供了哨兵的命令，哨兵是一个独立的进程，作为进程，它会独立运行。**其原理是哨兵通过发送命令，等待Redis服务器响应，从而监控运行的多个Redis实例。**
 
-<img src="https://upload-images.jianshu.io/upload_images/11320039-57a77ca2757d0924.png?imageMogr2/auto-orient/strip|imageView2/2/w/507/format/webp">
+![img](https://upload-images.jianshu.io/upload_images/11320039-57a77ca2757d0924.png?imageMogr2/auto-orient/strip|imageView2/2/w/507/format/webp)
 
 这里的哨兵有两个作用
 
@@ -1985,7 +1890,7 @@ SLAVEOF no one
 
 然而一个哨兵进程对Redis服务器进行监控，可能会出现问题，为此，我们可以使用多个哨兵进行监控。各个哨兵之间还会进行监控，这样就形成了多哨兵模式。
 
-<img src="https://upload-images.jianshu.io/upload_images/11320039-3f40b17c0412116c.png?imageMogr2/auto-orient/strip|imageView2/2/w/747/format/webp">
+![img](https://upload-images.jianshu.io/upload_images/11320039-3f40b17c0412116c.png?imageMogr2/auto-orient/strip|imageView2/2/w/747/format/webp)
 
 假设主服务器宕机，哨兵1先检测到这个结果，系统并不会马上进行failover过程，仅仅是哨兵1主观的认为主服务器不可用，这个现象成为**主观下线**。当后面的哨兵也检测到主服务器不可用，并且数量达到一定值时，那么哨兵之间就会进行一次投票，投票的结果由一个哨兵发起，进行failover操作。切换成功后，就会通过发布订阅模式，让各个哨兵把自己监控的从服务器实现切换主机，这个过程称为**客观下线**。这样对于客户端而言，一切都是透明的。
 
@@ -2065,7 +1970,6 @@ redis-sentinel Rconfig/sentinel.conf
 
 前台请求，后台先从缓存中取数据，取到直接返回结果，取不到时从数据库中取，数据库取到更新缓存，并返回结果，数据库也没取到，那直接返回空结果。
 
-![img](https://img-blog.csdn.net/20180919143214712?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tvbmd0aWFvNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 ### **缓存穿透**
 
@@ -2101,7 +2005,6 @@ redis-sentinel Rconfig/sentinel.conf
 
 **3、加互斥锁**，互斥锁参考代码如下：
 
-![img](https://img-blog.csdn.net/20180919143214879?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2tvbmd0aWFvNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 借鉴于：https://blog.csdn.net/fcvtb/article/details/89478554
 
@@ -2192,9 +2095,7 @@ https://blog.csdn.net/u014071875/article/details/103715183
 解决方法：
 
 打开配置文件找到logfile并修改
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220126173026725](../.vuepress/public/assets/img/image-20220126173026725.png)
+<img :src="$withBase('/assets/img/image-20220126173026725.png')">
 
 ```bash
 logfile /usr/local/redis/log-redis.log
@@ -2217,35 +2118,25 @@ chmod 777 dump.rdb
 ```
 
 还是不行，查看之前创建的日志文件
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220126175204964](../.vuepress/public/assets/img/image-20220126175204964.png)
+<img :src="$withBase('/assets/img/image-20220126175204964.png')">
 
 再次重新给dump.rbd赋权限
 
 此时使用root用户启动redis就可以正常退出
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220126175734671](../.vuepress/public/assets/img/image-20220126175734671.png)
+<img :src="$withBase('/assets/img/image-20220126175734671.png')">
 
 再开一个客户端使用自己的用户启动redis还是无法shutdown
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220126175807169](../.vuepress/public/assets/img/image-20220126175807169.png)
+<img :src="$withBase('/assets/img/image-20220126175807169.png')">
 
 经过查找网站得知
 
 https://blog.csdn.net/github_33809414/article/details/82531642
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220126181618679](../.vuepress/public/assets/img/image-20220126181618679.png)
+<img :src="$withBase('/assets/img/image-20220126181618679.png')">
 
 可能是放dump.rdb文件的文件夹没有权限
 
 给予bin目录所有权限后，自己的用户也可以正常退出了！
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220126182033697](../.vuepress/public/assets/img/image-20220126182033697.png)
+<img :src="$withBase('/assets/img/image-20220126182033697.png')">
 
 ```bash
 sudo chmod 777 bin
@@ -2254,9 +2145,7 @@ sudo chmod 777 bin
 ```
 
 ## 3.赋予权限失败
-
-<img :src="$withBase('/assets/img/image-20210909103754889.png')">
-![image-20220126182309441](../.vuepress/public/assets/img/image-20220126182309441.png)
+<img :src="$withBase('/assets/img/image-20220126182309441.png')">
 
 ```bash
 #切换root模式
