@@ -14,7 +14,7 @@
 
 ### 问题：安装webpack时报错
 
-![image-20211117201935068](../public/assets/img/image-20211117201935068.png)
+<img :src="$withBase('/assets/img/image-20211117201935068.png')">
 
 解决方法：
 
@@ -22,7 +22,7 @@
 该文件在：C:\Users{账户}\下的.npmrc文件，
 一般这种类型的都是默认被隐藏，一定要选择将隐藏取消掉
 
-![image-20211117202034076](../public/assets/img/image-20211117202034076.png)
+<img :src="$withBase('/assets/img/image-20211117202034076.png')">
 
 **注：网上说的没有权限用管理员方式运行啥的都是瞎扯，使用管理员运行是可以运行成功，但无法使用会出现上述的webpacke安装成功了但无法识别指令。**
 
@@ -62,7 +62,7 @@ cnpm config get registry
 cnpm config list
 ```
 
-![image-20211117202757554](../public/assets/img/image-20211117202757554.png)
+<img :src="$withBase('/assets/img/image-20211117202757554.png')">
 
 # 重大问题：
 
@@ -70,4 +70,4 @@ cnpm config list
 
 注意：我们之前遇到了无法下载或下载不成功的问题，所以删除了.npmrc文件，这是他的配置文件，我们删除以后，自然就恢复默认了，所以后续我们成功安好的vue 镜像源 webpack都是在默认路径中，这时候发现，npm可以找到我们下载的，而cmd就找不到！这是为什么？这是因为我们先前的环境变量设置的是我们自己定义的地方，但我们安装的vue等是在默认位置（C:\Users\kylargo\AppData\Roaming\npm），所以修改了环境变量后，我们就成功运行了！
 
-![image-20211118000402082](../public/assets/img/image-20211118000402082.png)
+<img :src="$withBase('/assets/img/image-20211118000402082.png')">

@@ -2,13 +2,16 @@
 
 ## Typora快捷键
 
-![image-20210910090850850](../public/assets/img/image-20210910090850850.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+![image-20210910090850850](../.vuepress/public/assets/img/image-20210910090850850.png)
 
 ## yaml
 
-![image-20210915211327057](../public/assets/img/image-20210915211327057.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+![image-20210915211327057](../.vuepress/public/assets/img/image-20210915211327057.png)
 
-![image-20210915211339368](../public/assets/img/image-20210915211339368.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+![image-20210915211339368](../.vuepress/public/assets/img/image-20210915211339368.png)
 
 在pojo类中使用了注解@ConfigurationProperties，配置后会有提示，**如果不配置会爆红，但并不影响运行！**
 
@@ -17,8 +20,8 @@
 Spring Boot的属性配置文件中可以通过${random}来产生int值、long值、string字符串或者UUID，来支持属性的随机值。从配置文件中获取符合规则的随机数。
 
 
-
-![image-20210915212916108](../public/assets/img/image-20210915212916108.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+![image-20210915212916108](../.vuepress/public/assets/img/image-20210915212916108.png)
 
 ￥{person.hello:hello}意思是，如果person.hello存在，那么就以存在的person.hello为值，若不存在则使用默认值“hello”，默认值就是冒号后的值。
 
@@ -42,7 +45,8 @@ SpringBoot启动时，会加载大量的
 
 精髓：
 
-![image-20210916204730750](../public/assets/img/image-20210916204730750.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+![image-20210916204730750](../.vuepress/public/assets/img/image-20210916204730750.png)
 
 ## SpringBoot Web开发
 
@@ -62,7 +66,8 @@ xxxProperties 自动配置类，装配配置文件中自定义的一些内容
 
 #### 1.webjars
 
-<img src="../public/assets/img/image-20210916210603945.png" alt="image-20210916210603945"  />
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+<img src="../.vuepress/public/assets/img/image-20210916210603945.png" alt="image-20210916210603945"  />
 
 进入www.webjars.org然后复制需要下载的jar的依赖
 
@@ -74,7 +79,8 @@ xxxProperties 自动配置类，装配配置文件中自定义的一些内容
 
 访问: localhost:8080/
 
-![image-20210916212017455](../public/assets/img/image-20210916212017455.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+![image-20210916212017455](../.vuepress/public/assets/img/image-20210916212017455.png)
 
 ### 首页配置注意
 

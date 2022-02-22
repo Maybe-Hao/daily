@@ -4,11 +4,12 @@
 
 配置好ssm环境后第一次启动出现错误
 
-![image-20210726181207653](../public/assets/img/image-20210726181207653.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+![image-20210726181207653](../.vuepress/public/assets/img/image-20210726181207653.png)
 
 
-
-![image-20210726181320980](../public/assets/img/image-20210726181320980.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+![image-20210726181320980](../.vuepress/public/assets/img/image-20210726181320980.png)
 
 问题：Bean不存在
 
@@ -202,8 +203,9 @@ Model：继承了ModelMap，是精简版，一般情况使用他
 
 ## Json
 
+``` js
 <script src="index.jsp"/>这个地方是错误的，虽然不会报错但确实是引用不到src的文件的，因为script不支持单闭合
-
+```
 
 
 JS和Json的相互转化
@@ -247,6 +249,7 @@ INSERT INTO `books`(`bookID`,`bookName`,`bookCounts`,`detail`) VALUES
 (3,Linux,5,从进门到进牢);
 ```
 
-报错：![image-20210725192359000](../public/assets/img/image-20210725192359000.png)
+<img :src="$withBase('/assets/img/image-20210909103754889.png')">
+报错：![image-20210725192359000](../.vuepress/public/assets/img/image-20210725192359000.png)
 
 解决：需要将 书id 改为  '书id' 运行即可。
