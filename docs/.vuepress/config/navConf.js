@@ -4,6 +4,16 @@ module.exports = [
     "link": "/"
   },
   {
+    "text": "前端",
+    "items": [
+      {
+        "text": "spring",
+        "link": "/rearend/spring"
+        
+      }
+    ]
+  },
+  {
     "text": "后端",
     "items": [
       {
@@ -11,5 +21,14 @@ module.exports = [
         "link": "/rearend/spring"
       }
     ]
-  }
+  },
+  {
+    "text": "算法",
+    "items": [
+      {
+        "text": "LeetCode",
+        "link": "/algorithm/LeetCode笔记本"
+      }
+    ]
+  },
 ]
