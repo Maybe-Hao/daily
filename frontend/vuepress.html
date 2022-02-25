@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuepress构建步骤 | 小李浩</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icons/144.png">
+    <link rel="mask-icon" href="/icons/144.png" color="#3eaf7c">
+    <meta name="description" content="小李浩的个人笔记,持续更新中">
+    <meta name="keywords" content="李浩的个人博客，前端，计算机，数学，英语，数据结构，操作系统">
+    <meta name="author" content="李浩">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.158ccfcd.css" as="style"><link rel="preload" href="/assets/js/app.137191da.js" as="script"><link rel="preload" href="/assets/js/8.5f316d53.js" as="script"><link rel="preload" href="/assets/js/2.b0f3ac7f.js" as="script"><link rel="preload" href="/assets/js/16.3be2605f.js" as="script"><link rel="preload" href="/assets/js/3.fee06abc.js" as="script"><link rel="prefetch" href="/assets/js/10.96419308.js"><link rel="prefetch" href="/assets/js/11.1720c200.js"><link rel="prefetch" href="/assets/js/12.e8ae8515.js"><link rel="prefetch" href="/assets/js/13.6319df35.js"><link rel="prefetch" href="/assets/js/14.3267eb75.js"><link rel="prefetch" href="/assets/js/15.f64f61d5.js"><link rel="prefetch" href="/assets/js/17.be6bd688.js"><link rel="prefetch" href="/assets/js/18.4a90b6ea.js"><link rel="prefetch" href="/assets/js/19.01649fcd.js"><link rel="prefetch" href="/assets/js/20.dfb5bbc7.js"><link rel="prefetch" href="/assets/js/21.85d22d90.js"><link rel="prefetch" href="/assets/js/4.2a92771b.js"><link rel="prefetch" href="/assets/js/5.239f0558.js"><link rel="prefetch" href="/assets/js/6.a372288e.js"><link rel="prefetch" href="/assets/js/7.30f568c0.js"><link rel="prefetch" href="/assets/js/9.1b16cfd7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.158ccfcd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="小李浩" class="logo"> <span class="site-name can-hide">小李浩</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/LeetCode笔记本.html" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/front/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/Nodejs安装问题心得/" class="nav-link">
+  Nodejs安装问题心得
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/Vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/rearend/知识点/" class="nav-link">
+  知识点
+</a></li><li class="dropdown-item"><!----> <a href="/rearend/Redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/rearend/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/rearend/SpringBoot/" class="nav-link">
+  SpringBoot
+</a></li><li class="dropdown-item"><!----> <a href="/rearend/SpringMVC/" class="nav-link">
+  SpringMVC
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法" class="dropdown-title"><span class="title">算法</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法" class="mobile-dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/algorithm/LeetCode笔记本.html" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端" class="dropdown-title"><span class="title">前端</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端" class="mobile-dropdown-title"><span class="title">前端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/frontend/front/" class="nav-link">
+  前端
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/Nodejs安装问题心得/" class="nav-link">
+  Nodejs安装问题心得
+</a></li><li class="dropdown-item"><!----> <a href="/frontend/Vue/" class="nav-link">
+  Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="后端" class="dropdown-title"><span class="title">后端</span> <span class="arrow down"></span></button> <button type="button" aria-label="后端" class="mobile-dropdown-title"><span class="title">后端</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/rearend/知识点/" class="nav-link">
+  知识点
+</a></li><li class="dropdown-item"><!----> <a href="/rearend/Redis/" class="nav-link">
+  Redis
+</a></li><li class="dropdown-item"><!----> <a href="/rearend/Spring/" class="nav-link">
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/rearend/SpringBoot/" class="nav-link">
+  SpringBoot
+</a></li><li class="dropdown-item"><!----> <a href="/rearend/SpringMVC/" class="nav-link">
+  SpringMVC
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Frontend</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/Nodejs安装问题心得.html" class="sidebar-link">Nodejs安装</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/Nodejs安装问题心得.html#_1-本次安装参考教程-https-blog-csdn-net-antma-article-details-86104068" class="sidebar-link">1.本次安装参考教程：https://blog.csdn.net/antma/article/details/86104068</a></li><li class="sidebar-sub-header"><a href="/frontend/Nodejs安装问题心得.html#_2-安装镜像源" class="sidebar-link">2.安装镜像源</a></li></ul></li><li><a href="/frontend/Vue.html" class="sidebar-link">Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/Vue.html#在线引入" class="sidebar-link">在线引入</a></li><li class="sidebar-sub-header"><a href="/frontend/Vue.html#简单的例子" class="sidebar-link">简单的例子</a></li><li class="sidebar-sub-header"><a href="/frontend/Vue.html#v指令" class="sidebar-link">V指令</a></li><li class="sidebar-sub-header"><a href="/frontend/Vue.html#axios" class="sidebar-link">Axios</a></li><li class="sidebar-sub-header"><a href="/frontend/Vue.html#计算属性" class="sidebar-link">计算属性</a></li><li class="sidebar-sub-header"><a href="/frontend/Vue.html#slot-插槽" class="sidebar-link">slot 插槽</a></li></ul></li><li><a href="/frontend/front.html" class="sidebar-link">前端持续学习中</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/front.html#html" class="sidebar-link">HTML</a></li><li class="sidebar-sub-header"><a href="/frontend/front.html#css" class="sidebar-link">CSS</a></li><li class="sidebar-sub-header"><a href="/frontend/front.html#js" class="sidebar-link">JS</a></li></ul></li><li><a href="/frontend/vuepress.html" aria-current="page" class="active sidebar-link">vuepress构建步骤</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#准备工作" class="sidebar-link">准备工作</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#在github中新建项目" class="sidebar-link">在github中新建项目</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#构建项目" class="sidebar-link">构建项目</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#基本配置" class="sidebar-link">基本配置</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#更新时间" class="sidebar-link">更新时间</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#发布" class="sidebar-link">发布</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#配置pwa" class="sidebar-link">配置PWA</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#vssue评论" class="sidebar-link">vssue评论</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#back-to-top" class="sidebar-link">back-to-top</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#图片缩放" class="sidebar-link">图片缩放</a></li><li class="sidebar-sub-header"><a href="/frontend/vuepress.html#github-actions自动部署" class="sidebar-link">Github Actions自动部署</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuepress构建步骤"><a href="#vuepress构建步骤" class="header-anchor">#</a> vuepress构建步骤</h1> <h2 id="准备工作"><a href="#准备工作" class="header-anchor">#</a> 准备工作</h2> <ol><li>github</li> <li>nodejs</li> <li>git</li> <li>yarn (推荐使用)</li></ol> <h2 id="在github中新建项目"><a href="#在github中新建项目" class="header-anchor">#</a> 在github中新建项目</h2> <img src="/assets/img/vuepress/新建项目.png" alt="新建项目">
+这里选择Node
+<br> <img src="/assets/img/vuepress/拉取项目.png" alt="拉取项目"> <br>
+克隆项目到本地
+<p><br><br></p> <h2 id="构建项目"><a href="#构建项目" class="header-anchor">#</a> 构建项目</h2> <ol><li>打开git bash</li></ol> <p>创建并进入一个新目录</p> <div class="language- extra-class"><pre class="language-text"><code>mkdir docs &amp;&amp; cd docs
+</code></pre></div><ol start="2"><li>初始化</li></ol> <div class="language- extra-class"><pre class="language-text"><code>yarn init # npm init
+</code></pre></div><ol start="3"><li>将 VuePress 安装为本地依赖</li></ol> <div class="language- extra-class"><pre class="language-text"><code>yarn add -D vuepress # npm install -D vuepress
+</code></pre></div><ol start="4"><li>创建博客</li></ol> <div class="language- extra-class"><pre class="language-text"><code>mkdir docs &amp;&amp; echo '# Hello VuePress' &gt; docs/README.md
+</code></pre></div><ol start="5"><li>在package.json中添加配置</li></ol> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;docs:dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;docs:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build docs&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>热更新配置:</strong>
+在package.json中的scripts中更改如下</p> <div class="language- extra-class"><pre class="language-text"><code>vuepress dev docs
+</code></pre></div><p>改为</p> <div class="language- extra-class"><pre class="language-text"><code>vuepress dev docs --temp .temp
+</code></pre></div><p>之后会生成.temp文件，可以在.gitignore上把它忽略，添加如下代码，就不会上传到github</p> <div class="language- extra-class"><pre class="language-text"><code># vuepress temp file
+.temp
+</code></pre></div><p><br><br></p> <h2 id="基本配置"><a href="#基本配置" class="header-anchor">#</a> 基本配置</h2> <p>在docs文件夹下创建.vuepress文件夹，在其下创建config.js，公共资源目录public，配置config.js
+<img src="/assets/img/vuepress/创建config.png"><br></p> <h3 id="配置config-js"><a href="#配置config-js" class="header-anchor">#</a> 配置config.js</h3> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">themeConfig</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">logo</span><span class="token operator">:</span> <span class="token string">'/assets/img/logo.png'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Home'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Guide'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/guide/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'External'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'https://google.com'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="配置导航栏以及侧边栏"><a href="#配置导航栏以及侧边栏" class="header-anchor">#</a> 配置导航栏以及侧边栏</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// .vuepress/config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">themeConfig</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">nav</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Languages'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">ariaLabel</span><span class="token operator">:</span> <span class="token string">'Language Menu'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">items</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Chinese'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/language/chinese/'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span> <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'Japanese'</span><span class="token punctuation">,</span> <span class="token literal-property property">link</span><span class="token operator">:</span> <span class="token string">'/language/japanese/'</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">sidebar</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">'/'</span><span class="token punctuation">,</span>
+      <span class="token string">'/page-a'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token string">'/page-b'</span><span class="token punctuation">,</span> <span class="token string">'Explicit link text'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><a href="https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E5%AF%8C%E6%96%87%E6%9C%AC-footer" target="_blank" rel="noopener noreferrer">详情请看官方文档.<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>可以使用插件自动生成导航栏
+<strong><a href="https://shanyuhai123.github.io/vuepress-plugin-auto-sidebar/zh/" target="_blank" rel="noopener noreferrer">Vuepress Plugin Auto Sidebar.<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></strong></p> <h4 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h4> <div class="language- extra-class"><pre class="language-text"><code>yarn add vuepress-plugin-auto-sidebar -D || npm i vuepress-plugin-auto-sidebar -D
+</code></pre></div><h4 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h4> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token string">&quot;vuepress-plugin-auto-sidebar&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token comment">// options</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><br><br></p> <h2 id="更新时间"><a href="#更新时间" class="header-anchor">#</a> 更新时间</h2> <p>使用插件@vuepress/plugin-last-updated,如果使用<em>默认主题</em>，无需安装该插件，因为 VuePress 的 core 中已经包含此插件，直接使用 themeConfig.lastUpdated 选项。</p> <h3 id="使用-2"><a href="#使用-2" class="header-anchor">#</a> 使用</h3> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'@vuepress/last-updated'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="选项"><a href="#选项" class="header-anchor">#</a> 选项</h3> <h4 id="transformer"><a href="#transformer" class="header-anchor">#</a> transformer</h4> <ul><li>类型: (timestamp: number, lang: string) =&gt; string</li> <li>默认值: undefined
+默认情况下，该插件为每个页面生成一个 13 位的时间戳，可以传入一个 transformer 将其转换为你想要的任何格式。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">'@vuepress/last-updated'</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token function-variable function">transformer</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">timestamp<span class="token punctuation">,</span> lang</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 不要忘了安装 moment</span>
+          <span class="token keyword">const</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span>
+          moment<span class="token punctuation">.</span><span class="token function">locale</span><span class="token punctuation">(</span>lang<span class="token punctuation">)</span>
+          <span class="token keyword">return</span> <span class="token function">moment</span><span class="token punctuation">(</span>timestamp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fromNow</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>可以使用moment插件对时间格式进行更改，以及设置中文格式</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> moment <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'moment'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+moment<span class="token punctuation">.</span><span class="token function">locale</span><span class="token punctuation">(</span><span class="token string">&quot;zh-cn&quot;</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string-property property">'@vuepress/last-updated'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">transformer</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">timestamp</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">moment</span><span class="token punctuation">(</span>timestamp<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">&quot;LLLL&quot;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>效果如下：<br> <img src="/assets/img/vuepress/时间格式.png"><br></p> <h4 id="dateoptions"><a href="#dateoptions" class="header-anchor">#</a> dateOptions</h4> <ul><li>类型: object</li> <li>默认值: undefined
+你也可以传入一个对象作为选项，以自定义时间戳的输出格式。详细信息请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString" target="_blank" rel="noopener noreferrer">Date.prototype.toLocaleString()<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>的选项参数。</li></ul> <p><br><br></p> <h2 id="发布"><a href="#发布" class="header-anchor">#</a> 发布</h2> <h3 id="创建deploy-sh"><a href="#创建deploy-sh" class="header-anchor">#</a> 创建deploy.sh</h3> <p>在项目中创建<strong>deploy.sh</strong>文件</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token shebang important">#!/usr/bin/env sh</span>
+
+<span class="token comment"># 确保脚本抛出遇到的错误</span>
+<span class="token builtin class-name">set</span> -e
+
+<span class="token comment"># 生成静态文件</span>
+<span class="token function">npm</span> run docs:build
+
+<span class="token comment"># 进入生成的文件夹</span>
+<span class="token builtin class-name">cd</span> docs/.vuepress/dist
+
+<span class="token comment"># 如果是发布到自定义域名</span>
+<span class="token comment"># echo 'www.example.com' &gt; CNAME</span>
+
+<span class="token function">git</span> init
+<span class="token function">git</span> <span class="token function">add</span> -A
+<span class="token function">git</span> commit -m <span class="token string">'deploy'</span>
+
+<span class="token comment"># 如果发布到 https://&lt;USERNAME&gt;.github.io</span>
+<span class="token comment"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git master</span>
+
+<span class="token comment"># 如果发布到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;</span>
+<span class="token comment"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;REPO&gt;.git master:gh-pages</span>
+
+<span class="token builtin class-name">cd</span> -
+</code></pre></div><p>根据需要对文件进行修改，如：</p> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token comment"># 如果是发布到自定义域名</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'daily.xiaojubusongxi26.love'</span> <span class="token operator">&gt;</span> CNAME
+
+<span class="token comment"># 如果发布到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;</span>
+<span class="token function">git</span> push -f git@github.com:xiaojubusongxi26/mydaily.git master:gh-pages
+</code></pre></div><p>在<code>package.json</code>中添加</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;deploy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bash deploy.sh&quot;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h3 id="github-pages部署"><a href="#github-pages部署" class="header-anchor">#</a> Github Pages部署</h3> <p>执行指令</p> <div class="language- extra-class"><pre class="language-text"><code>yarn deploy
+</code></pre></div><p>打开github即可看到生成了新的分支
+<img src="/assets/img/vuepress/deploy.png"><br></p> <br> <p><strong>查看是否部署成功:</strong> <img src="/assets/img/vuepress/settings.png"><br> <img src="/assets/img/vuepress/githubpages.png"><br> <img src="/assets/img/vuepress/查看域名.png"><br></p> <p><br><br></p> <h2 id="配置pwa"><a href="#配置pwa" class="header-anchor">#</a> 配置PWA</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>PWA可以让网站的体验变得更好，能够模拟一些原生功能，比如通知推送。</p></div> <h3 id="安装-2"><a href="#安装-2" class="header-anchor">#</a> 安装</h3> <div class="language- extra-class"><pre class="language-text"><code>yarn add -D @vuepress/plugin-pwa
+# OR npm install -D @vuepress/plugin-pwa
+</code></pre></div><h3 id="使用-3"><a href="#使用-3" class="header-anchor">#</a> 使用</h3> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string-property property">'@vuepress/pwa'</span><span class="token operator">:</span>  <span class="token punctuation">{</span>
+      <span class="token literal-property property">serviceWorker</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">updatePopup</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 更改刷新内容的弹窗的显示文字</span>
+        <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">&quot;内容有更新啦~&quot;</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">buttonText</span><span class="token operator">:</span> <span class="token string">&quot;我看看&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>为了让你的网站完全地兼容 PWA，你需要:</p> <ul><li>在 .vuepress/public 提供 Manifest 和 icons</li> <li>在 .vuepress/config.js 添加正確的 <a href="https://vuepress.vuejs.org/config/#head" target="_blank" rel="noopener noreferrer">head links<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</li></ul> <p>更多细节，请参见 <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank" rel="noopener noreferrer">MDN docs about the Web App Manifest<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>.</p></div> <p>我的配置如下：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">head</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">rel</span><span class="token operator">:</span> <span class="token string">'icon'</span><span class="token punctuation">,</span> <span class="token literal-property property">href</span><span class="token operator">:</span> <span class="token string">'/favicon.ico'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'keywords'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'小橘不颂兮的个人博客，前端，计算机， 数学，英语，数据结构，操作系统'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'author'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'小橘不颂兮'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">rel</span><span class="token operator">:</span> <span class="token string">'manifest'</span><span class="token punctuation">,</span> <span class="token literal-property property">href</span><span class="token operator">:</span> <span class="token string">'/manifest.json'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'theme-color'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'#3eaf7c'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'apple-mobile-web-app-capable'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'yes'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'apple-mobile-web-app-status-bar-style'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'black'</span> <span class="token punctuation">}</span>  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">rel</span><span class="token operator">:</span> <span class="token string">'apple-touch-icon'</span><span class="token punctuation">,</span> <span class="token literal-property property">href</span><span class="token operator">:</span> <span class="token string">'/icons/144.png'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">rel</span><span class="token operator">:</span> <span class="token string">'mask-icon'</span><span class="token punctuation">,</span> <span class="token literal-property property">href</span><span class="token operator">:</span> <span class="token string">'/icons/144.png'</span><span class="token punctuation">,</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'#3eaf7c'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'msapplication-TileImage'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'/icons/144.png'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span><span class="token string">'meta'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'msapplication-TileColor'</span><span class="token punctuation">,</span> <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">'#000000'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string-property property">'@vuepress/pwa'</span><span class="token operator">:</span>  <span class="token punctuation">{</span>
+      <span class="token literal-property property">serviceWorker</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">updatePopup</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 更改刷新内容的弹窗的显示文字</span>
+        <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">&quot;内容有更新啦~&quot;</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">buttonText</span><span class="token operator">:</span> <span class="token string">&quot;我看看&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>Manifest.json</code>文件可以参考如下：</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;小橘不颂兮&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;short_name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;小橘&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;icons&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;src&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/icons/144.png&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;sizes&quot;</span><span class="token operator">:</span> <span class="token string">&quot;144x144&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;image/png&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;src&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/icons/192.png&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;sizes&quot;</span><span class="token operator">:</span> <span class="token string">&quot;192x192&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;image/png&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;src&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/icons/256.png&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;sizes&quot;</span><span class="token operator">:</span> <span class="token string">&quot;256x256&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;image/png&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;src&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/icons/512.png&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;sizes&quot;</span><span class="token operator">:</span> <span class="token string">&quot;512x512&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;image/png&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;start_url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/index.html&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;display&quot;</span><span class="token operator">:</span> <span class="token string">&quot;standalone&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;background_color&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#fff&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;theme_color&quot;</span><span class="token operator">:</span> <span class="token string">&quot;#3eaf7c&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>icons图标</code>可以在这个网站进行生成（尺寸必须为1：1）👉<a href="https://lecepin.github.io/pwa-genico/" target="_blank" rel="noopener noreferrer">Manifest 图标生成工具<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <br> <p>执行<code>yarn deploy</code>指令后，按<code>F12</code>打开浏览器开发者调试工具进行查看
+<br> <img src="/assets/img/vuepress/pwa.png"></p> <br>
+每次打包提交之后这边都会进行更新，安装成功后会提示页面刷新
+<br> <img src="/assets/img/vuepress/pwa更新.png"> <p><br><br></p> <h2 id="vssue评论"><a href="#vssue评论" class="header-anchor">#</a> vssue评论</h2> <p>Vssue是Vue 驱动的、基于 Issue 的评论插件.<a href="https://vssue.js.org/zh/" target="_blank" rel="noopener noreferrer">官网地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="安装-3"><a href="#安装-3" class="header-anchor">#</a> 安装</h3> <div class="language- extra-class"><pre class="language-text"><code>yarn add @vssue/vuepress-plugin-vssue
+yarn add @vssue/api-github-v4
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>v3版本不需要登录之后就可以评论，v4版本需要登录后才能进行评论。</p></div> <h3 id="使用插件"><a href="#使用插件" class="header-anchor">#</a> 使用插件</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// .vuepress/config.js</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'@vssue/vuepress-plugin-vssue'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 设置 `platform` 而不是 `api`,安装自己安装的版本来填写</span>
+      <span class="token literal-property property">platform</span><span class="token operator">:</span> <span class="token string">'github'</span><span class="token punctuation">,</span>
+
+      <span class="token comment">// 其他的 Vssue 配置，以我的使用的github为例</span>
+      <span class="token literal-property property">owner</span><span class="token operator">:</span> <span class="token string">'OWNER_OF_REPO'</span><span class="token punctuation">,</span> <span class="token comment">// github用户名</span>
+      <span class="token literal-property property">repo</span><span class="token operator">:</span> <span class="token string">'NAME_OF_REPO'</span><span class="token punctuation">,</span> <span class="token comment">// 项目名称</span>
+      <span class="token literal-property property">clientId</span><span class="token operator">:</span> <span class="token string">'YOUR_CLIENT_ID'</span><span class="token punctuation">,</span> <span class="token comment">// 生成的CLIENT_ID</span>
+      <span class="token literal-property property">clientSecret</span><span class="token operator">:</span> <span class="token string">'YOUR_CLIENT_SECRET'</span><span class="token punctuation">,</span> <span class="token comment">// 生成的CLIENT_SECRET</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p><code>@vssue/vuepress-plugin-vssue</code> 会自动根据你设置的 <code>platform</code> 为你解析对应的 <code>api</code> 包：</p> <p><code>platform github</code> - api 包 <code>@vssue/api-github-v3</code><br> <code>platform github-v4</code> - api 包 <code>@vssue/api-github-v4</code><br> <code>platform gitlab</code> - api 包 <code>@vssue/api-gitlab-v4</code><br> <code>platform bitbucket</code> - api <code>包 @vssue/api-bitbucket-v2</code><br> <code>platform gitee</code> - api 包 <code>@vssue/api-gitee-v5</code><br> <code>platform gitea</code> - api 包 <code>@vssue/api-gitea-v1</code><br></p> <p><code>owner</code>: 对应 repository 的拥有者帐号或者团队<br> <code>repo</code>: 用来存储评论的 repository<br> <code>clientId</code>: OAuth App 的 <code>client id</code><br> <code>clientSecret</code>: OAuth App 的 <code>client secret</code> （只有在使用某些平台时需要）<br></p></div> <h3 id="clientid和clientsecret-生成"><a href="#clientid和clientsecret-生成" class="header-anchor">#</a> clientId和clientSecret 生成</h3> <p>在<code>GitHub</code>的<code>Settings &gt; Developer settings</code>下，选择<code>Oauth Apps</code>，点击右侧进行创建。
+<br> <img src="/assets/img/vuepress/OauthApps.png"> <br> <img src="/assets/img/vuepress/创建OAuth Application.png"> <br></p> <p><strong>创建之后可以看到</strong> <br> <img src="/assets/img/vuepress/生成Client secrets.png"> <br></p> <p>将生成的<code>clientId</code>和<code>clientSecret</code>复制到项目中即可</p> <h3 id="使用-vssue-组件"><a href="#使用-vssue-组件" class="header-anchor">#</a> 使用 Vssue 组件</h3> <p>在需要生成评论的Markdown文件中添加如下代码即可使用</p> <div class="language-md extra-class"><pre class="language-md"><code><span class="token comment">&lt;!-- README.md --&gt;</span>
+
+<span class="token title important"><span class="token punctuation">#</span> Vssue Demo</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Vssue</span> <span class="token attr-name">:title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>$title<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>效果如下，如果是第一次则需要登录后才能评论
+<br> <img src="/assets/img/vuepress/vssue效果.png"> <br></p> <h3 id="全局配置vssue"><a href="#全局配置vssue" class="header-anchor">#</a> 全局配置Vssue</h3> <p>在<code>config.js</code>中添加</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'@vssue/vuepress-plugin-vssue'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">autoCreateIssue</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>如果 <code>autoCreateIssue</code> 设置为 <code>true</code>，在对应的 <code>Issue</code> 不存在时，Vssue 会自动尝试为你创建 Issue。注意，若你当前没有登录，则 Vssue 会自动跳转到平台的认证页面。</p> <p>如果 <code>autoCreateIssue</code> 设置为 <code>false</code>，你必须手动创建 <code>Issue</code>。</p></div> <br> <p><strong>这里使用了一下vuepress官方文件，主要需要用到<a href="https://vuepress.vuejs.org/zh/theme/inheritance.html#%E5%8A%A8%E6%9C%BA" target="_blank" rel="noopener noreferrer">主题的继承<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></strong></p> <p>在<code>.vuepress</code>文件下创建文件<code>/theme/layouts/Layout.vue</code>,<code>/theme/util/index.js</code>和<code>/theme/index.js</code>。
+<br> <img src="/assets/img/vuepress/主题的继承文件夹.png"> <br></p> <p>三个文件代码如下：</p> <details class="custom-block details"><summary>theme/index.js</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// theme/index.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">extend</span><span class="token operator">:</span> <span class="token string">'@vuepress/theme-default'</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <details class="custom-block details"><summary>theme/util/index.js</summary> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">const</span> hashRE <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">#.*$</span><span class="token regex-delimiter">/</span></span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> extRE <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\.(md|html)$</span><span class="token regex-delimiter">/</span></span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> endingSlashRE <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\/$</span><span class="token regex-delimiter">/</span></span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> outboundRE <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^[a-z]+:</span><span class="token regex-delimiter">/</span><span class="token regex-flags">i</span></span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">normalize</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">decodeURI</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>hashRE<span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>extRE<span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getHash</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> match <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>hashRE<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>match<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> match<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">isExternal</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> outboundRE<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">isMailto</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^mailto:</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">isTel</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^tel:</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">ensureExt</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isExternal</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> path
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> hashMatch <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>hashRE<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> hash <span class="token operator">=</span> hashMatch <span class="token operator">?</span> hashMatch<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">:</span> <span class="token string">''</span>
+  <span class="token keyword">const</span> normalized <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>endingSlashRE<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>normalized<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> path
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> normalized <span class="token operator">+</span> <span class="token string">'.html'</span> <span class="token operator">+</span> hash
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">isActive</span> <span class="token punctuation">(</span><span class="token parameter">route<span class="token punctuation">,</span> path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> routeHash <span class="token operator">=</span> <span class="token function">decodeURIComponent</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>hash<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> linkHash <span class="token operator">=</span> <span class="token function">getHash</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>linkHash <span class="token operator">&amp;&amp;</span> routeHash <span class="token operator">!==</span> linkHash<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> routePath <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+  <span class="token keyword">const</span> pagePath <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> routePath <span class="token operator">===</span> pagePath
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">resolvePage</span> <span class="token punctuation">(</span><span class="token parameter">pages<span class="token punctuation">,</span> rawPath<span class="token punctuation">,</span> base</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isExternal</span><span class="token punctuation">(</span>rawPath<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'external'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> rawPath
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>base<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    rawPath <span class="token operator">=</span> <span class="token function">resolvePath</span><span class="token punctuation">(</span>rawPath<span class="token punctuation">,</span> base<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">normalize</span><span class="token punctuation">(</span>rawPath<span class="token punctuation">)</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> pages<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">normalize</span><span class="token punctuation">(</span>pages<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>regularPath<span class="token punctuation">)</span> <span class="token operator">===</span> path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> pages<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'page'</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token function">ensureExt</span><span class="token punctuation">(</span>pages<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">[vuepress] No matching page found for sidebar item &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>rawPath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">resolvePath</span> <span class="token punctuation">(</span><span class="token parameter">relative<span class="token punctuation">,</span> base<span class="token punctuation">,</span> append</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> firstChar <span class="token operator">=</span> relative<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>firstChar <span class="token operator">===</span> <span class="token string">'/'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> relative
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>firstChar <span class="token operator">===</span> <span class="token string">'?'</span> <span class="token operator">||</span> firstChar <span class="token operator">===</span> <span class="token string">'#'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> base <span class="token operator">+</span> relative
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> stack <span class="token operator">=</span> base<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+
+  <span class="token comment">// remove trailing segment if:</span>
+  <span class="token comment">// - not appending</span>
+  <span class="token comment">// - appending to trailing slash (last segment is empty)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>append <span class="token operator">||</span> <span class="token operator">!</span>stack<span class="token punctuation">[</span>stack<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// resolve relative path</span>
+  <span class="token keyword">const</span> segments <span class="token operator">=</span> relative<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^\/</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> segments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> segment <span class="token operator">=</span> segments<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>segment <span class="token operator">===</span> <span class="token string">'..'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>segment <span class="token operator">!==</span> <span class="token string">'.'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>segment<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// ensure leading slash</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>stack<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    stack<span class="token punctuation">.</span><span class="token function">unshift</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> stack<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @param { Page } page
+ * @param { string } regularPath
+ * @param { SiteData } site
+ * @param { string } localePath
+ * @returns { SidebarGroup }
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">resolveSidebarItems</span> <span class="token punctuation">(</span><span class="token parameter">page<span class="token punctuation">,</span> regularPath<span class="token punctuation">,</span> site<span class="token punctuation">,</span> localePath</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> pages<span class="token punctuation">,</span> themeConfig <span class="token punctuation">}</span> <span class="token operator">=</span> site
+
+  <span class="token keyword">const</span> localeConfig <span class="token operator">=</span> localePath <span class="token operator">&amp;&amp;</span> themeConfig<span class="token punctuation">.</span>locales
+    <span class="token operator">?</span> themeConfig<span class="token punctuation">.</span>locales<span class="token punctuation">[</span>localePath<span class="token punctuation">]</span> <span class="token operator">||</span> themeConfig
+    <span class="token operator">:</span> themeConfig
+
+  <span class="token keyword">const</span> pageSidebarConfig <span class="token operator">=</span> page<span class="token punctuation">.</span>frontmatter<span class="token punctuation">.</span>sidebar <span class="token operator">||</span> localeConfig<span class="token punctuation">.</span>sidebar <span class="token operator">||</span> themeConfig<span class="token punctuation">.</span>sidebar
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>pageSidebarConfig <span class="token operator">===</span> <span class="token string">'auto'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">resolveHeaders</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> sidebarConfig <span class="token operator">=</span> localeConfig<span class="token punctuation">.</span>sidebar <span class="token operator">||</span> themeConfig<span class="token punctuation">.</span>sidebar
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>sidebarConfig<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> base<span class="token punctuation">,</span> config <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">resolveMatchingConfig</span><span class="token punctuation">(</span>regularPath<span class="token punctuation">,</span> sidebarConfig<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>config <span class="token operator">===</span> <span class="token string">'auto'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">resolveHeaders</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> config
+      <span class="token operator">?</span> config<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token function">resolveItem</span><span class="token punctuation">(</span>item<span class="token punctuation">,</span> pages<span class="token punctuation">,</span> base<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @param { Page } page
+ * @returns { SidebarGroup }
+ */</span>
+<span class="token keyword">function</span> <span class="token function">resolveHeaders</span> <span class="token punctuation">(</span><span class="token parameter">page</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> headers <span class="token operator">=</span> <span class="token function">groupHeaders</span><span class="token punctuation">(</span>page<span class="token punctuation">.</span>headers <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'group'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">collapsable</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span> page<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+    <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">children</span><span class="token operator">:</span> headers<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">h</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'auto'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> h<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+      <span class="token literal-property property">basePath</span><span class="token operator">:</span> page<span class="token punctuation">.</span>path<span class="token punctuation">,</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> page<span class="token punctuation">.</span>path <span class="token operator">+</span> <span class="token string">'#'</span> <span class="token operator">+</span> h<span class="token punctuation">.</span>slug<span class="token punctuation">,</span>
+      <span class="token literal-property property">children</span><span class="token operator">:</span> h<span class="token punctuation">.</span>children <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">groupHeaders</span> <span class="token punctuation">(</span><span class="token parameter">headers</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// group h3s under h2</span>
+  headers <span class="token operator">=</span> headers<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">h</span> <span class="token operator">=&gt;</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> h<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token keyword">let</span> lastH2
+  headers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">h</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>h<span class="token punctuation">.</span>level <span class="token operator">===</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      lastH2 <span class="token operator">=</span> h
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>lastH2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token punctuation">(</span>lastH2<span class="token punctuation">.</span>children <span class="token operator">||</span> <span class="token punctuation">(</span>lastH2<span class="token punctuation">.</span>children <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>h<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> headers<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">h</span> <span class="token operator">=&gt;</span> h<span class="token punctuation">.</span>level <span class="token operator">===</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">resolveNavLinkItem</span> <span class="token punctuation">(</span><span class="token parameter">linkItem</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>linkItem<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">type</span><span class="token operator">:</span> linkItem<span class="token punctuation">.</span>items <span class="token operator">&amp;&amp;</span> linkItem<span class="token punctuation">.</span>items<span class="token punctuation">.</span>length <span class="token operator">?</span> <span class="token string">'links'</span> <span class="token operator">:</span> <span class="token string">'link'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * @param { Route } route
+ * @param { Array&lt;string|string[]&gt; | Array&lt;SidebarGroup&gt; | [link: string]: SidebarConfig } config
+ * @returns { base: string, config: SidebarConfig }
+ */</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">resolveMatchingConfig</span> <span class="token punctuation">(</span><span class="token parameter">regularPath<span class="token punctuation">,</span> config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">base</span><span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">config</span><span class="token operator">:</span> config
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> base <span class="token keyword">in</span> config<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">ensureEndingSlash</span><span class="token punctuation">(</span>regularPath<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token function">encodeURI</span><span class="token punctuation">(</span>base<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        base<span class="token punctuation">,</span>
+        <span class="token literal-property property">config</span><span class="token operator">:</span> config<span class="token punctuation">[</span>base<span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">ensureEndingSlash</span> <span class="token punctuation">(</span><span class="token parameter">path</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(\.html|\/)$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+    <span class="token operator">?</span> path
+    <span class="token operator">:</span> path <span class="token operator">+</span> <span class="token string">'/'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">resolveItem</span> <span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> pages<span class="token punctuation">,</span> base<span class="token punctuation">,</span> groupDepth <span class="token operator">=</span> <span class="token number">1</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> item <span class="token operator">===</span> <span class="token string">'string'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">resolvePage</span><span class="token punctuation">(</span>pages<span class="token punctuation">,</span> item<span class="token punctuation">,</span> base<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>Array<span class="token punctuation">.</span><span class="token function">isArray</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token function">resolvePage</span><span class="token punctuation">(</span>pages<span class="token punctuation">,</span> item<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> base<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> item<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> children <span class="token operator">=</span> item<span class="token punctuation">.</span>children <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>children<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> item<span class="token punctuation">.</span>path<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token function">resolvePage</span><span class="token punctuation">(</span>pages<span class="token punctuation">,</span> item<span class="token punctuation">.</span>path<span class="token punctuation">,</span> base<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">title</span><span class="token operator">:</span> item<span class="token punctuation">.</span>title
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'group'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> item<span class="token punctuation">.</span>path<span class="token punctuation">,</span>
+      <span class="token literal-property property">title</span><span class="token operator">:</span> item<span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+      <span class="token literal-property property">sidebarDepth</span><span class="token operator">:</span> item<span class="token punctuation">.</span>sidebarDepth<span class="token punctuation">,</span>
+      <span class="token literal-property property">initialOpenGroupIndex</span><span class="token operator">:</span> item<span class="token punctuation">.</span>initialOpenGroupIndex<span class="token punctuation">,</span>
+      <span class="token literal-property property">children</span><span class="token operator">:</span> children<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">child</span> <span class="token operator">=&gt;</span> <span class="token function">resolveItem</span><span class="token punctuation">(</span>child<span class="token punctuation">,</span> pages<span class="token punctuation">,</span> base<span class="token punctuation">,</span> groupDepth <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">collapsable</span><span class="token operator">:</span> item<span class="token punctuation">.</span>collapsable <span class="token operator">!==</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></details> <details class="custom-block details"><summary>theme/layouts/Layout.vue</summary> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+    <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>theme-container<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>pageClasses<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">@touchstart</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>onTouchStart<span class="token punctuation">&quot;</span></span>
+    <span class="token attr-name">@touchend</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>onTouchEnd<span class="token punctuation">&quot;</span></span>
+  <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Navbar</span>
+      <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>shouldShowNavbar<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">@toggle-sidebar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>toggleSidebar<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sidebar-mask<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>toggleSidebar(false)<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Sidebar</span>
+      <span class="token attr-name">:items</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sidebarItems<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">@toggle-sidebar</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>toggleSidebar<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#top</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sidebar-top<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#bottom</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sidebar-bottom<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Sidebar</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Home</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>$page.frontmatter.home<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Page</span>
+      <span class="token attr-name">v-else</span>
+      <span class="token attr-name">:sidebar-items</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sidebarItems<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#top</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>page-top<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">#bottom</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>page-bottom<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Vssue</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>theme-default-content content__default<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:options</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{ locale: <span class="token punctuation">'</span>zh<span class="token punctuation">'</span> }<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Page</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> Home <span class="token keyword">from</span> <span class="token string">'@theme/components/Home.vue'</span>
+<span class="token keyword">import</span> Navbar <span class="token keyword">from</span> <span class="token string">'@theme/components/Navbar.vue'</span>
+<span class="token keyword">import</span> Page <span class="token keyword">from</span> <span class="token string">'@theme/components/Page.vue'</span>
+<span class="token keyword">import</span> Sidebar <span class="token keyword">from</span> <span class="token string">'@theme/components/Sidebar.vue'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> resolveSidebarItems <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../util'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Layout'</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    Home<span class="token punctuation">,</span>
+    Page<span class="token punctuation">,</span>
+    Sidebar<span class="token punctuation">,</span>
+    Navbar
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">isSidebarOpen</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">computed</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">shouldShowNavbar</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> themeConfig <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$site
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> frontmatter <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$page
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>
+        frontmatter<span class="token punctuation">.</span>navbar <span class="token operator">===</span> <span class="token boolean">false</span>
+        <span class="token operator">||</span> themeConfig<span class="token punctuation">.</span>navbar <span class="token operator">===</span> <span class="token boolean">false</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$title
+        <span class="token operator">||</span> themeConfig<span class="token punctuation">.</span>logo
+        <span class="token operator">||</span> themeConfig<span class="token punctuation">.</span>repo
+        <span class="token operator">||</span> themeConfig<span class="token punctuation">.</span>nav
+        <span class="token operator">||</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$themeLocaleConfig<span class="token punctuation">.</span>nav
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">shouldShowSidebar</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> frontmatter <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$page
+      <span class="token keyword">return</span> <span class="token punctuation">(</span>
+        <span class="token operator">!</span>frontmatter<span class="token punctuation">.</span>home
+        <span class="token operator">&amp;&amp;</span> frontmatter<span class="token punctuation">.</span>sidebar <span class="token operator">!==</span> <span class="token boolean">false</span>
+        <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>sidebarItems<span class="token punctuation">.</span>length
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">sidebarItems</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token function">resolveSidebarItems</span><span class="token punctuation">(</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$page<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$page<span class="token punctuation">.</span>regularPath<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$site<span class="token punctuation">,</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$localePath
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">pageClasses</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> userPageClass <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$page<span class="token punctuation">.</span>frontmatter<span class="token punctuation">.</span>pageClass
+      <span class="token keyword">return</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token string-property property">'no-navbar'</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>shouldShowNavbar<span class="token punctuation">,</span>
+          <span class="token string-property property">'sidebar-open'</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>isSidebarOpen<span class="token punctuation">,</span>
+          <span class="token string-property property">'no-sidebar'</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>shouldShowSidebar
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        userPageClass
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">afterEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>isSidebarOpen <span class="token operator">=</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">toggleSidebar</span> <span class="token punctuation">(</span><span class="token parameter">to</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>isSidebarOpen <span class="token operator">=</span> <span class="token keyword">typeof</span> to <span class="token operator">===</span> <span class="token string">'boolean'</span> <span class="token operator">?</span> to <span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>isSidebarOpen
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'toggle-sidebar'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>isSidebarOpen<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// side swipe</span>
+    <span class="token function">onTouchStart</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>touchStart <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">x</span><span class="token operator">:</span> e<span class="token punctuation">.</span>changedTouches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientX<span class="token punctuation">,</span>
+        <span class="token literal-property property">y</span><span class="token operator">:</span> e<span class="token punctuation">.</span>changedTouches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientY
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">onTouchEnd</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> dx <span class="token operator">=</span> e<span class="token punctuation">.</span>changedTouches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientX <span class="token operator">-</span> <span class="token keyword">this</span><span class="token punctuation">.</span>touchStart<span class="token punctuation">.</span>x
+      <span class="token keyword">const</span> dy <span class="token operator">=</span> e<span class="token punctuation">.</span>changedTouches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>clientY <span class="token operator">-</span> <span class="token keyword">this</span><span class="token punctuation">.</span>touchStart<span class="token punctuation">.</span>y
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>dx<span class="token punctuation">)</span> <span class="token operator">&gt;</span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>dy<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>dx<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">40</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>dx <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>touchStart<span class="token punctuation">.</span>x <span class="token operator">&lt;=</span> <span class="token number">80</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">toggleSidebar</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">toggleSidebar</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre></div></details> <p>在<code>Layout.vue</code>文件中添加了这行代码实现全局配置</p> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Vssue</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>theme-default-content content__default<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:options</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>{ locale: <span class="token punctuation">'</span>zh<span class="token punctuation">'</span> }<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p><br><br></p> <h2 id="back-to-top"><a href="#back-to-top" class="header-anchor">#</a> back-to-top</h2> <h3 id="安装-4"><a href="#安装-4" class="header-anchor">#</a> 安装</h3> <div class="language- extra-class"><pre class="language-text"><code>yarn add -D @vuepress/plugin-back-to-top
+# OR npm install -D @vuepress/plugin-back-to-top
+</code></pre></div><h3 id="使用-4"><a href="#使用-4" class="header-anchor">#</a> 使用</h3> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+  plugins: ['@vuepress/back-to-top']
+}
+</code></pre></div><p><br><br></p> <h2 id="图片缩放"><a href="#图片缩放" class="header-anchor">#</a> 图片缩放</h2> <h3 id="安装-5"><a href="#安装-5" class="header-anchor">#</a> 安装</h3> <div class="language- extra-class"><pre class="language-text"><code>yarn add -D @vuepress/plugin-medium-zoom
+# OR npm install -D @vuepress/plugin-medium-zoom
+</code></pre></div><h3 id="使用-5"><a href="#使用-5" class="header-anchor">#</a> 使用</h3> <h4 id="简单使用"><a href="#简单使用" class="header-anchor">#</a> 简单使用</h4> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string-property property">'@vuepress/medium-zoom'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h4 id="自定义使用"><a href="#自定义使用" class="header-anchor">#</a> 自定义使用</h4> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'@vuepress/medium-zoom'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">selector</span><span class="token operator">:</span> <span class="token string">'img.zoom-custom-imgs'</span><span class="token punctuation">,</span>
+      <span class="token comment">// medium-zoom options here</span>
+      <span class="token comment">// See: https://github.com/francoischalifour/medium-zoom#options</span>
+      <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">margin</span><span class="token operator">:</span> <span class="token number">16</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><a href="https://github.com/francoischalifour/medium-zoom#options" target="_blank" rel="noopener noreferrer">选项配置<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><br><br></p> <h2 id="github-actions自动部署"><a href="#github-actions自动部署" class="header-anchor">#</a> Github Actions自动部署</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>配置<code>Github Actions自动部署</code>之后就不需要再执行<code>yarn deploy</code>手动部署项目了，每次项目提交到github之后，会自动部署到网站上</p></div> <h3 id="创建deploy-yml"><a href="#创建deploy-yml" class="header-anchor">#</a> 创建deploy.yml</h3> <p>在项目根目录下创建<code>.github/workflows/deploy.yml</code> <br> <img src="/assets/img/vuepress/创建deploy.yml文件.png"> <br></p> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">name</span><span class="token punctuation">:</span> Publish page
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build-and-deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Checkout 🛎️
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2 <span class="token comment"># If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.</span>
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">persist-credentials</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install and Build 🔧 <span class="token comment"># This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.</span>
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          yarn
+          yarn docs:build</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Deploy 🚀
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> JamesIves/github<span class="token punctuation">-</span>pages<span class="token punctuation">-</span>deploy<span class="token punctuation">-</span>action@releases/v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">GITHUB_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.ACCESS_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">BRANCH</span><span class="token punctuation">:</span> gh<span class="token punctuation">-</span>pages <span class="token comment"># The branch the action should deploy to.</span>
+          <span class="token key atrule">FOLDER</span><span class="token punctuation">:</span> docs/.vuepress/dist <span class="token comment"># The folder the action should deploy.</span>
+</code></pre></div><h3 id="生成令牌"><a href="#生成令牌" class="header-anchor">#</a> 生成令牌</h3> <br> <img src="/assets/img/vuepress/创建token.png"> <br> <img src="/assets/img/vuepress/token设置.png"> <br> <img src="/assets/img/vuepress/密钥.png"> <br> <p><strong>然后回到项目仓库中，点击仓库中的<code>Settings</code></strong> <br> <img src="/assets/img/vuepress/创建secrets.png"> <br> <img src="/assets/img/vuepress/secrets.png"> <br></p> <p><strong>每次提交项目之后，可以在仓库的<code>Actions</code>中看到自动部署过程</strong> <br> <img src="/assets/img/vuepress/actions.png"> <br> <img src="/assets/img/vuepress/actions成功.png"> <br> <br> <br> <br></p> <p><strong>本篇笔记到此结束了，如果遇到问题，欢迎评论留言~</strong></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2022年2月25日星期五凌晨2点15分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/frontend/front.html" class="prev">
+        前端持续学习中
+      </a></span> <!----></p></div>  <!----></main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.137191da.js" defer></script><script src="/assets/js/8.5f316d53.js" defer></script><script src="/assets/js/2.b0f3ac7f.js" defer></script><script src="/assets/js/16.3be2605f.js" defer></script><script src="/assets/js/3.fee06abc.js" defer></script>
+  </body>
+</html>
