@@ -373,14 +373,11 @@ Scope 作用域
 # 问题及解决
 
 问题
-
-![image-20210802103511832](C:\Users\kylargo\AppData\Roaming\Typora\typora-user-images\image-20210802103511832.png)
-
-![image-20210802103529797](C:\Users\kylargo\AppData\Roaming\Typora\typora-user-images\image-20210802103529797.png)
+<img :src="$withBase('/assets/img/image-20210802103511832.png')">
+<img :src="$withBase('/assets/img/image-20210802103529797.png')">
 
 原因：
-
-![image-20210802103448906](C:\Users\kylargo\AppData\Roaming\Typora\typora-user-images\image-20210802103448906.png)
+<img :src="$withBase('/assets/img/image-20210802103448906.png')">
 
 解决：在mybatis的配置文件中，将useSSL=true改为useSSL=false即可正确解决问题。
 
