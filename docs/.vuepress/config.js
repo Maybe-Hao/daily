@@ -7,7 +7,7 @@ const moment = require('moment')
 moment.locale("zh-cn")
 
 module.exports = {
-  title: "小李浩",
+  title: "一个卡卡角角",
   description: "小李浩的个人笔记,持续更新中",
   head: headConf,
   plugins: pluginsConf,
