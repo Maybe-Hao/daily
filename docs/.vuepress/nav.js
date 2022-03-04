@@ -9,6 +9,15 @@ module.exports = [
     ]
   },
   {
+    "text": "安装环境",
+    "items": [
+      {
+        "text": "R语言",
+        "link": "/install/R语言安装/"
+      },
+    ]
+  },
+  {
     "text": "前端",
     "items": [
       {
